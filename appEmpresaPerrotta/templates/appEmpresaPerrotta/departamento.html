@@ -1,0 +1,14 @@
+{% extends 'appEmpresaPerrotta/base.html' %}
+{% block main %}
+<div>
+  <h1> Departamentos </h1>
+    <ul>
+         {% for departamento in departamentos %}
+           <li> nombre: {{departamento.nombre}},telefono: {{departamento.telefono}}</li>
+         {% endfor %}
+         
+    </ul>
+</div>
+
+{% endblock  %}
+

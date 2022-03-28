@@ -1,0 +1,18 @@
+{% extends 'appEmpresaPerrotta/base.html' %}
+{% block main %}
+
+{% if formulario.errors %}
+    <p style="color: red"> Hay problemas con los datos cargados</p>
+{% endif %}
+    
+
+<form action="/appEmpresaPerrotta/formularioEmpresa/" method="POST">
+    {% csrf_token %}
+    <table>
+        {{formulario.as_table}}
+    </table>
+
+    <input type="submit" value="Cargar empresa">
+</form>
+
+{% endblock %}

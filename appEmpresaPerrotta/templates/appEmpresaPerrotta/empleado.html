@@ -1,0 +1,18 @@
+{% extends 'appEmpresaPerrotta/base.html' %}
+{% block main %}
+<div>
+  <h1> Empleados </h1>
+    <ul>
+         {% for empleado in empleados %}
+           <li> nombre: {{empleado.nombre}},apellido: {{empleado.apellido}}, email: {{empleado.email}}, rol: {{empleado.rol}}</li>
+         {% endfor %}
+         
+    </ul>
+</div>
+
+{% endblock  %}
+</head>
+<body>
+    
+</body>
+</html>
